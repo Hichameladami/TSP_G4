@@ -49,7 +49,8 @@ we can proceed in the same way to call the function `Greedy_2opt.cpp`.
 
 
 ## Nearest Neighbor
-### Principe :
+
 One starts from an arbitrary summit from which one goes to the closest neighboring summit, then from this one to its closest non-visited neighbor, etc , until all the summits have been traversed, where one returns to the start.
-### Exemple d'exécution :
+### Example of execution :
+in this example, we choose n=4 cities
 ![capture](https://user-images.githubusercontent.com/77694470/105101141-b573b300-5aae-11eb-881f-fc3f2c7c66ec.PNG)
