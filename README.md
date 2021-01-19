@@ -12,7 +12,7 @@ A way of improving the current solution provided by the Greedy algorithm is the 
 
 The following R code implements the constructive and improving Greedy heuristic method and applies is in the file `Greedy_2opt.R` and `Greedy_2opt.cpp`.
 
-Details on the heapsort algorithm can be found on [this article(http://160592857366.free.fr/joe/ebooks/ShareData/Heuristics%20for%20the%20Traveling%20Salesman%20Problem%20By%20Christian%20Nillson.pdf). 
+Details on the heapsort algorithm can be found on [thisarticle (http://160592857366.free.fr/joe/ebooks/ShareData/Heuristics%20for%20the%20Traveling%20Salesman%20Problem%20By%20Christian%20Nillson.pdf). 
 ### Package installation
 
 You first need to install the devtools package, it can be done easily from Rstudio. We install the package from Github :
