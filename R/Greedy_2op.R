@@ -6,12 +6,12 @@ villes <- function(n){
   return(villes)
 }
 
-D_distance <- function(n) {
+Ddistance <- function(n) {
   return(as.matrix(stats::dist(villes(n), diag = TRUE, upper = TRUE)))
 }
 
 Greedy_2opt<-function(n){
-  Distance<-D_distance(n)
+  Distance<-Ddistance(n)
   N <- sqrt(length(Distance))
   DISTANCE <- matrix(rep(0,N^2),N,N)
   distance <- matrix(Distance,N,N)
