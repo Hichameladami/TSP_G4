@@ -1,25 +1,26 @@
-Nearest_neighbor=function(matrice_couts,ville_depart){
-  C=matrice_couts # matrice des couts : ville de depart en ligne et ville d'arrivée en colonne
-  V=ville_depart # initialisation ville de départ
-  Trajet=c(V)# vecteur enregistrera le trajet du voyageur
+nearest_neighbor_R=function(matrice_couts,ville_depart)
+{
+  C=matrice_couts # matrice des couts : ville de depart en ligne et ville d'arrivee en colonne
+  V=ville_depart # initialisation ville de depart
+  Trajet=c(V) # vecteur enregistrera le trajet du voyageur
+  Cout_total=0
 
-  # Determination du trajet du voyageur
-  for (i in 1:(nrow(C)-2)){
+  # Determination du trajet du voyageur et le cout associe
+
+  for (i in 2:nrow(C))
+  {
     C[,V]=1/0
     V=which.min(C[V,])
     Trajet=c(Trajet,V)
+    Cout_total= Cout_total + matrice_couts[Trajet[i-1],Trajet[i]]
   }
-  Trajet=c(Trajet,setdiff(1:nrow(C), Trajet),ville_depart)
 
-  # Calcul du cout total du trajet
-  Cout_total=0
-  for (i in 1:nrow(C))
-  {
-    Cout_total=Cout_total+matrice_couts[Trajet[i],Trajet[i+1]]
-  }
+  Trajet=c(Trajet,ville_depart)
+
+  Cout_total = Cout_total + matrice_couts[Trajet[nrow(C)],ville_depart]
 
   # Retourner les resultats
   return_list=list(Trajet,Cout_total)
-  names(return_list)=c("Trajet du vayageur","Cout total")
+  names(return_list)=c("Trajet","Cout")
   return(return_list)
 }
