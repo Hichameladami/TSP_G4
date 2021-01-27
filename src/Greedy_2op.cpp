@@ -8,7 +8,7 @@ using namespace std;
 // Function to find the minimum
 // cost path for all the paths
 //[[Rcpp::export]]
-void Greedy_2opt(NumericMatrix tsp)
+void Greedy_2opt_cpp(NumericMatrix tsp)
 {
   int sum = 0;
   int counter = 0;
